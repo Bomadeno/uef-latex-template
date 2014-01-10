@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%UEF FORMAT%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%basic layout
+\documentclass[a4paper, 12pt]{article}
+% Actually use characters like ö and ä in output, not accented a.
+\usepackage[T1]{fontenc}
+% set line spacing
+\usepackage{setspace}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex}
+\linespread{1.3}
+% Allow the usage of graphics (.png, .jpg)
+\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+\usepackage[utf8]{inputenc}
+% Last language in list is default for document. Set to other languages using eg. \begin{otherlanguage}{finnish}
+\usepackage[finnish,english]{babel}
+% font... ewk to times.
+\usepackage{times}
+%custom margins
+\usepackage[]{vmargin}
+\setpapersize{A4}	
+\setmarginsrb{35mm}{30mm}{30mm}{20mm}{0pt}{0mm}{12pt}{13mm}
+% Correct hyphenation in urls
+\usepackage{url}
+% Support long tables
+\usepackage[]{longtable}
+%Pretty bibliography in UEF format
+\usepackage{natbib}
+% verbatim code listings
+\usepackage{listings}
+%Unobtrusive in document links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%UEF FORMAT%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% do cover pages
+\include{titlepage}
+
+\pagenumbering{arabic} % arabic(1234) numbering, autoreset to 1
+
+
+\section{Introduction}
+This template works perfectly in Verbosus, and simplifies working in \LaTeX . Just upload the tex files and pdf files appropriately, and copy and paste the sample references below into the bibliography.
+
+\subsection{Predecessor}
+
+The template was developed sources provided at http://www.uef.fi/en/cs/latex-pohja
+
+\section{Making a Bibliography}
+Copy and paste the following into Verbosus' bibliography page, then make citations, like John Smith did \cite{smith99} under instruction of Jane Doe \cite{doe95}
+
+\begin{lstlisting}[frame=single, columns=fullflexible, basicstyle=\ttfamily]
+@article{doe95,
+ author="Jane Doe",
+ title="Another Article",
+ journal="Journal of Journaling",
+ year="1995"
+}
+
+@book{smith99,
+ author="John Smith",
+ title="Writing nicely",
+ publisher="Incredible Books Inc",
+ year="1999"
+}
+\end{lstlisting}
+
+
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{document}
+
+\end{document}

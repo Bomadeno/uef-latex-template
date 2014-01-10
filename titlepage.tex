@@ -1,0 +1,177 @@
+%Fill these in and they'll propagate across the title page. Remember to keep the space at the end!
+\def \ajankohta {Tammikuu 2014 }
+\def \ajankohtaenglish {January 2014 }
+\def \authorname {John Smith }
+\def \thesistitle {A Simple UEF LaTeX Template }
+\def \thesissubtext { For Prettier Theses }
+\def \campus {Joensuu }
+\def \facultyschooleng {School of Computer Science }
+\def \facultyschoolfin {Tietojenkäsittelytiede }
+%FT = PhD, FM = MSc
+\def \supervisorsfin {FT Jane Doe }
+\def \supervisorseng {PhD Jane Doe }
+
+\def \documenttypeeng {Master's Thesis }
+\def \documenttypefin {Pro gradu -tutkielman }
+%\def \documenttypeeng {Bachelor's Thesis}
+%\def \thesistypefin {Kandidaatintutkielma}
+
+%Number of non-cover pages, to last page of references
+\def \mypagecount {42 }
+\def \myappendixcount {1 }
+\def \myappendixpagecount {32 }
+
+%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%
+
+\vspace*{3cm}
+\vspace{0.5cm}
+
+\begin{center}
+\begin{LARGE}\thesistitle \end{LARGE}
+
+\begin{Large}\thesissubtext \end{Large} 
+
+\vspace{1.5cm}
+
+\begin{Large}\authorname \end{Large}
+
+\vspace{\stretch{1}}
+
+{\large
+\documenttypeeng
+~\\
+% to have it in black and white, swap the commented line
+\includegraphics[width=7cm]{UEF_fin_pysty_1_cmyk}\\
+% \includegraphics[width=7cm]{UEF_fin_pysty_1_black}\\
+Faculty of Science and Forestry\\
+\facultyschooleng \\
+\ajankohtaenglish \\
+}
+\end{center}
+
+\vspace{0.5cm}
+
+\thispagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%% Abstract page Finnish %%%%%%%%%%%%%%%%%%
+\begin{spacing}{1.0}
+\begin{otherlanguage}{finnish}
+\newpage
+
+
+\pagenumbering{roman} % roman numeral page numbers, auto reset to 1
+
+ITÄ-SUOMEN YLIOPISTO, Luonnontieteiden ja metsätieteiden tiedekunta, \campus Tietojenkäsittelytieteen laitos\\
+\facultyschoolfin \\
+\\ 
+Opiskelija, \authorname : \thesistitle \\
+\documenttypefin , \mypagecount s., \myappendixcount liite (\myappendixpagecount s.)\\
+\documenttypefin ohjaajat: \supervisorsfin \\
+\ajankohta \\
+
+
+Tiivistelmä:
+
+150-200 word abstract in Finnish, fit onto one page
+
+
+% Key words in Finnish
+
+% 5 kappaletta tutkielman sisältöä kuvaavia avainsanoja
+
+% Seuraavassa olevat avainsanat kuvaavat tätä ohjetta; älä laita
+% yhtäkään näistä omaan tutkielmaasi!
+
+~\\ % Tämä tekee tyhjän rivin; älä editoi tätä pois
+Avainsanat:
+tutkielmaohje, tutkielman kirjoittaminen, tutkielman rakenne,
+kandidaatintutkielma, pro gradu
+
+% CR-luokat
+
+% ACM-luokitus löytyy Computing Reviews -lehden jokaisen
+% vuosikerran ensimmäisestä numerosta sekä verkosta
+% osoitteesta http://www.acm.org/class/
+
+% Ota omat luokkasi tuoreimmasta vuosikerrasta.
+
+ACM-luokat (ACM Computing Classification System,
+1998 version): A.m, K.3.2\\
+
+\end{otherlanguage}
+\newpage
+
+%%%%%%%%%%%%%%%%%% Abstract page in English %%%%%%%%%%%%%%%%%%
+
+UNIVERSITY OF EASTERN FINLAND, Faculty of Science and Forestry, \campus School of Computing\\
+\facultyschooleng \\ \\
+Student, \authorname : \thesistitle \\
+\documenttypeeng , \mypagecount p., \myappendixcount appendix (\myappendixpagecount p.)\\
+Supervisors of the \documenttypeeng : \supervisorseng \\
+\ajankohtaenglish \\
+
+
+Abstract:
+
+150-200 word abstract in English, fit onto one page
+
+
+% Key words English
+
+% Edellisellä sivulla olevien suomenkielisten avainsanojen käännökset
+
+~\\ % Tämä tekee tyhjän rivin; älä editoi tätä pois
+Keywords:
+keywords in english
+
+% CR-luokat
+
+% ACM-luokitus löytyy Computing Reviews -lehden jokaisen
+% vuosikerran ensimmäisestä numerosta sekä verkosta
+% osoitteesta http://www.acm.org/class/
+
+% Ota omat luokkasi tuoreimmasta vuosikerrasta.
+
+CR Categories (ACM Computing Classification System,
+1998 version): A.m, K.3.2\\
+
+\end{spacing}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%% Foreword/Preface %%%%%%%%%%%%%%%%%%
+
+\section*{Foreword}
+Up to one page forweword, for thanks and admirations.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%% Abbrieviations %%%%%%%%%%%%%%%%%%
+
+\section*{List of Abbreviations}
+
+\begin{tabular}{lp{12.5cm}}
+
+ACM & Association for Computing Machinery \\
+
+ISY & Itä-Suomen yliopisto \\
+
+UEF & University of Eastern Finland\\
+
+\end{tabular}
+
+\newpage
+
+
+% ----------------- Table of Contents -------------
+
+% Älä tee seuraavaan mitään muutoksia:
+
+\setlength{\parskip}{0ex}
+
+\tableofcontents
+\newpage
+
+\setlength{\parskip}{2ex}
